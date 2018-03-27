@@ -7,13 +7,11 @@ import (
 	"testing"
 
 	"github.com/hashicorp/nomad/client/config"
-	"github.com/hashicorp/nomad/client/driver"
 	"github.com/hashicorp/nomad/testutil"
 	"github.com/stretchr/testify/require"
 )
 
 func TestFingerprintManager_Run_MockDriver(t *testing.T) {
-	driver.CheckForMockDriver(t)
 	t.Parallel()
 	require := require.New(t)
 
@@ -48,7 +46,6 @@ func TestFingerprintManager_Run_MockDriver(t *testing.T) {
 }
 
 func TestFingerprintManager_Run_ResourcesFingerprint(t *testing.T) {
-	driver.CheckForMockDriver(t)
 	t.Parallel()
 	require := require.New(t)
 
